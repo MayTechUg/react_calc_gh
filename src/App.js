@@ -8,7 +8,7 @@ function App() {
 
   return (
     <div className="App">
-      <Header title = "Facebook"/>
+      <Header/>
         <Routes>
           <Route path="/" element={<Home/>}/>
           <Route path="*" element={<Missing/>}/>
