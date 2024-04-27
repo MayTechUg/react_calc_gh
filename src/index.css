@@ -1,13 +1,181 @@
-body {
+* {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: #333;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+#root {
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  }
+  
+  .App {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    max-width: 425px;
+    justify-content: center;
+    background-color: #222;
+  }
+.header svg {
+  font-size: 3rem;
+  color: rgb(95, 41, 150);
+  background-color: transparent;
+  width: 100%;
+}
+.header {
+  padding: 0.25rem;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  border: 2px solid rgb(105, 56, 155);
+  border-bottom: none;
+  /* box-shadow: 0 1px 5px rebeccapurple; */
+  background-color: rgba(102, 51, 153, 0.212);
+    border-radius: 20px 20px 0 0;
+}
+  .oddInput {
+    background-color: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .oddInput input {
+    border: none;
+    outline: none;
+    font-size: 1.4rem;
+    background-color: #ffffff2d;
+    height: 55px;
+    width: 55px;
+    border-radius: 0 5px 5px 0;
+    box-shadow: 0 0 5px #000;
+    display: flex;
+    justify-content: center;
+  }
+  .submit button{
+    border: 2px solid rebeccapurple;
+    outline: none;
+    font-size: 1rem;
+    width: 100%;
+    padding: 0.25rem;
+    color: #ffffff7c;
+    background-color: rgba(102, 51, 153, 0.329);
+    border-radius: 10px;
+    box-shadow: -5px 5px 5px #080808d2;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+  }
+  .submit button:hover,button:active{
+    border: 2px solid rgba(0, 0, 0, 0.473);
+    outline: none;
+    font-size: 1rem;
+    width: 100%;
+    padding: 0.25rem;
+    color: rebeccapurple;
+    background-color: rgba(0, 0, 0, 0.13);
+    border-radius: 10px;
+    box-shadow: -5px 5px 5px rgba(3, 3, 3, 0.301);
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+  }
+  .submit {
+    border: none;
+    outline: none;
+    font-size: 1.4rem;
+    background-color: transparent;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+  }
+  .oddInput label {
+    border: none;
+    color: rebeccapurple;
+    outline: none;
+    font-size: 1.2rem;
+    background-color: #000;
+    height: 45px;
+    border-radius: 5px 0 0 5px ;
+    box-shadow: 0 0 5px #ffffff2d;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0.25rem;
+  }
+  .home{
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    gap: 1rem;
+    padding: 2rem 0 0 0;
+    background-color: rgba(102, 51, 153, 0.212);
+    padding: 0.25rem;
+    border: 2px solid rgb(105, 56, 155);
+    border-top: none;
+    border-bottom: none;
+  }
+
+  .home, .missing {
+    flex: 1;
+    width: 100%;
+  }
+  .arbit {
+    font-family: monospace;
+    background-color: #ffffff4b;
+    padding: 0.25rem;
+    margin: 0.7rem 0;
+    text-shadow: 0 0 5px #fff;
+    border-radius: 5px;
+    box-shadow: -5px 5px 5px #080808d2;
+  }
+.before {
+    color: #bebebe44;
+    background-color: transparent;
+}
+.Available {
+  color: rgb(0, 172, 0);
+  background-color: rgba(0, 128, 0, 0.425);
+  padding: 0.25rem;
+  border-radius: 10px;
+}
+.notAvailable {
+  color: red;
+  text-shadow: 0 0 2px #000;
+  background-color: rgba(255, 0, 0, 0.26);
+  padding: 0.25rem;
+  border-radius: 10px;
+}
+
+  .footer {
+    display: flex;
+    overflow: hidden;
+    width: 100%;
+    color: #fff;
+    font-size: 1.5rem;
+    text-shadow: 0px 1px 5px rgb(95, 41, 150);
+    border: 2px solid rgb(105, 56, 155);
+    border-top: none;
+    border-radius: 0 0 20px 20px;
+    padding: 0.25rem;
+    background-color: rgba(102, 51, 153, 0.212);
+  }
+.word {
+  opacity: 0;
+  transition: transform 5s ease,opacity 6s ease;
+  width: 100%;
+  white-space: nowrap;
+  background-color: transparent;
+}
+.word.active {
+  opacity: 1;
+  transform: translateX(-30%);
 }
